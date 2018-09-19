@@ -14,8 +14,8 @@ import com.architecturedemo.viewmodel.LoginViewModel;
 public class LoginActivity extends LifecycleActivity {
     private static final String TAG ="LoginActivity" ;
     private EditText etUsername;
-     private EditText etPwd;
-     private Button btnLogin;
+    private EditText etPwd;
+    private Button btnLogin;
     private LoginViewModel loginViewModel;
 
     @Override
@@ -38,6 +38,7 @@ public class LoginActivity extends LifecycleActivity {
      * 登录
      */
     private void login() {
+        loginViewModel.login(etUsername.getText().toString(), etPwd.getText().toString());
         loginViewModel.getLoginDtoLiveData().observe(this, loginDtoBaseDto -> handLogin(loginDtoBaseDto));
     }
     /**

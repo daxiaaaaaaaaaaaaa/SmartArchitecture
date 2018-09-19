@@ -25,9 +25,6 @@ public class ExceptionEngine {
     public static final int TIME_OUT_ERROR = 9004;//网络连接超时
     public static final int UNKNOWNHOSTEXCEPTION = 9005;//网络连接超时
 
-
-
-    @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
     public static ApiException handleException(Throwable e) {
         ApiException ex;
         if (e instanceof HttpException) {             //HTTP错误

@@ -30,8 +30,6 @@ public class BaseRepository<T> {
      * 发送请求服务器事件
      */
     public BaseHttpSubscriber<T> send() {
-        LoginDto dto = SPUtil.getData(Constant.SP.SP, Constant.SP.LOGIN_KEY, LoginDto.class, null);
-
             flowable.subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(baseHttpSubscriber);

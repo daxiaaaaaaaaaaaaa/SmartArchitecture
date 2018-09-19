@@ -48,7 +48,6 @@ public class BaseHttpSubscriber<T> implements Subscriber<BaseDto<T>> {
         s.request(1);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
     @Override
     public void onNext(BaseDto<T> t) {
         if (t.getCode() == Constant.Server.SUCCESS_CODE) {
@@ -59,7 +58,6 @@ public class BaseHttpSubscriber<T> implements Subscriber<BaseDto<T>> {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
     @Override
     public void onError(Throwable t) {
         ex = ExceptionEngine.handleException(t);
