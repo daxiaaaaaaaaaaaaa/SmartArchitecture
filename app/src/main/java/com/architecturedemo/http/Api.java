@@ -6,7 +6,6 @@ import com.architecturedemo.dto.LoginDto;
 import com.architecturedemo.utils.HttpUtil;
 import com.mujin.keji.architecturedemo.vo.LoginVo;
 
-
 import io.reactivex.Flowable;
 
 public class Api {

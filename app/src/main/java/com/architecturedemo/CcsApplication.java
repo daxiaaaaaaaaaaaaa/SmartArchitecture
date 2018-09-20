@@ -2,17 +2,14 @@ package com.architecturedemo;
 
 import android.app.Activity;
 import android.content.Context;
-
 import android.content.res.Configuration;
 import android.support.multidex.MultiDexApplication;
-
 
 import com.architecturedemo.ssl.SslContextFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 
 import javax.net.ssl.SSLSocketFactory;
 

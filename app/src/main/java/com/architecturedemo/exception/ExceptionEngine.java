@@ -1,10 +1,7 @@
 package com.architecturedemo.exception;
 
 import android.net.ParseException;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.MalformedJsonException;
-
 
 import com.google.gson.JsonParseException;
 

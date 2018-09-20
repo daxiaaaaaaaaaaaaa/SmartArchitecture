@@ -6,7 +6,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.architecturedemo.Constant;
 import com.architecturedemo.utils.SPUtil;
 
-
 import java.io.IOException;
 import java.util.List;
 

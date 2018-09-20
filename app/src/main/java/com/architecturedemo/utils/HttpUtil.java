@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.architecturedemo.base.BaseVo;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
 import java.io.File;
 import java.lang.reflect.Type;
 import java.util.HashMap;
@@ -12,7 +13,6 @@ import java.util.List;
 import java.util.Map;
 
 import okhttp3.MediaType;
-import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 
 

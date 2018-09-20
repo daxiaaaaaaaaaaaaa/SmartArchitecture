@@ -3,6 +3,7 @@ package com.architecturedemo.ssl;
 import android.content.Context;
 
 import com.architecturedemo.Constant;
+
 import java.io.InputStream;
 import java.security.KeyStore;
 

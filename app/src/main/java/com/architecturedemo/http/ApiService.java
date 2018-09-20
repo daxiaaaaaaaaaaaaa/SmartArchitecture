@@ -6,7 +6,6 @@ import com.architecturedemo.dto.LoginDto;
 
 import java.util.Map;
 
-
 import io.reactivex.Flowable;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;

@@ -1,4 +1,4 @@
-package com.mujin.keji.architecturedemo.vo;
+package com.architecturedemo.vo;
 
 
 import com.architecturedemo.base.BaseVo;

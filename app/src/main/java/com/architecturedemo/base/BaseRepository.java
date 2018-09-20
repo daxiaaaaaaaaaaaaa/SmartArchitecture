@@ -1,10 +1,6 @@
 package com.architecturedemo.base;
 
 
-import com.architecturedemo.Constant;
-import com.architecturedemo.dto.LoginDto;
-import com.architecturedemo.utils.SPUtil;
-
 import io.reactivex.Flowable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
