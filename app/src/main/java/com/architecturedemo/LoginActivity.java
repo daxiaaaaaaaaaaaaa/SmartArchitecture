@@ -1,18 +1,22 @@
 package com.architecturedemo;
 
 import android.arch.lifecycle.LifecycleActivity;
+import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.architecturedemo.base.BaseDto;
 import com.architecturedemo.dto.LoginDto;
 import com.architecturedemo.viewmodel.LoginViewModel;
+
 public class LoginActivity extends LifecycleActivity {
-    private static final String TAG ="LoginActivity" ;
+    private static final String TAG = "LoginActivity";
     private EditText etUsername;
     private EditText etPwd;
     private Button btnLogin;
@@ -33,24 +37,23 @@ public class LoginActivity extends LifecycleActivity {
             }
         });
     }
-
     /**
      * 登录
      */
     private void login() {
         loginViewModel.login(etUsername.getText().toString(), etPwd.getText().toString());
-        loginViewModel.getLoginDtoLiveData().observe(this, loginDtoBaseDto -> handLogin(loginDtoBaseDto));
+        loginViewModel.getLoginDtoLiveData().observe(this, new Observer<BaseDto<LoginDto>>() {
+            @Override
+            public void onChanged(@Nullable BaseDto<LoginDto> loginDtoBaseDto) {
+                if (loginDtoBaseDto.getCode() == Constant.Server.SUCCESS_CODE) {
+                    Log.e(TAG, "handLogin: 登录成功");
+                    Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(LoginActivity.this, loginDtoBaseDto.getMsg(), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
-    /**
-     * 处理登陆数据
-     *
-     * @param loginDtoBaseDto
-     */
-    private void handLogin(BaseDto<LoginDto> loginDtoBaseDto) {
-        if (loginDtoBaseDto.getCode() == Constant.Server.SUCCESS_CODE) {
-            Log.e(TAG, "handLogin: 登录成功" );
-        } else {
-            Log.e(TAG, "handLogin: 登录失败" );
-        }
-    }
+
+
 }

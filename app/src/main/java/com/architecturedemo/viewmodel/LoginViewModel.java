@@ -7,9 +7,7 @@ import com.architecturedemo.base.BaseDto;
 import com.architecturedemo.dto.LoginDto;
 import com.architecturedemo.repository.ILoginRepository;
 import com.architecturedemo.repository.LoginRepository;
-import com.mujin.keji.architecturedemo.vo.LoginVo;
-
-
+import com.architecturedemo.vo.LoginVo;
 /**
  * 登录viewmodel
  *

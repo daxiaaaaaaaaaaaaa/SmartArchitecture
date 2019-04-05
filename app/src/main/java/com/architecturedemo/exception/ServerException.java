@@ -1,7 +1,7 @@
 package com.architecturedemo.exception;
 
 /**
- * 服务器返回的错误
+ * 服务器返回的Exception
  */
 public class ServerException extends RuntimeException {
     private int code;

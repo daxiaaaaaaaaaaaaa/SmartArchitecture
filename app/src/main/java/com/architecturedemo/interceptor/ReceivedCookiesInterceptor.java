@@ -12,7 +12,7 @@ import okhttp3.Interceptor;
 import okhttp3.Response;
 
 /**
- * 首次请求的处理
+ * 自定义拦截器刷新sessionId 首次请求的处理
  * @author : weishixiong
  * @create : 18/05/03
  */

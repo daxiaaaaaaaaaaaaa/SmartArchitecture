@@ -14,7 +14,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * 非首次请求的处理
+ * 自定义拦截器刷新sessionId  非首次请求的处理
  * @author : weishixiong
  * @create : 18/05/03
  */

@@ -5,9 +5,7 @@ import android.arch.lifecycle.LiveData;
 
 import com.architecturedemo.base.BaseDto;
 import com.architecturedemo.dto.LoginDto;
-import com.mujin.keji.architecturedemo.vo.LoginVo;
-
-
+import com.architecturedemo.vo.LoginVo;
 /**
  * 登陆Repository
  *

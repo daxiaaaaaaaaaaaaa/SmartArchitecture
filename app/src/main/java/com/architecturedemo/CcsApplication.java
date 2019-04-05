@@ -5,15 +5,10 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.support.multidex.MultiDexApplication;
 
-import com.architecturedemo.ssl.SslContextFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import javax.net.ssl.SSLSocketFactory;
-
-
 
 /**
  * 全局application
@@ -55,15 +50,6 @@ public class CcsApplication extends MultiDexApplication {
     }
 
 
-
-    /**
-     * 获取https证书
-     *
-     * @return
-     */
-    public static SSLSocketFactory getSslSocket() {
-        return SslContextFactory.getSSLSocketFactory(getInstance());
-    }
 
     /**
      * 添加一个正在运行的Activity进入容器

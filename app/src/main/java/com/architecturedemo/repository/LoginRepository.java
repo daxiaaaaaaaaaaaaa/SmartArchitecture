@@ -6,7 +6,7 @@ import com.architecturedemo.base.BaseDto;
 import com.architecturedemo.base.BaseRepository;
 import com.architecturedemo.dto.LoginDto;
 import com.architecturedemo.http.Api;
-import com.mujin.keji.architecturedemo.vo.LoginVo;
+import com.architecturedemo.vo.LoginVo;
 
 
 /**

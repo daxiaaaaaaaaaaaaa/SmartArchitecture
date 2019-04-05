@@ -4,8 +4,7 @@ package com.architecturedemo.http;
 import com.architecturedemo.base.BaseDto;
 import com.architecturedemo.dto.LoginDto;
 import com.architecturedemo.utils.HttpUtil;
-import com.mujin.keji.architecturedemo.vo.LoginVo;
-
+import com.architecturedemo.vo.LoginVo;
 import io.reactivex.Flowable;
 
 public class Api {

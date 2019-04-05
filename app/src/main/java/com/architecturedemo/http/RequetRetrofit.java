@@ -2,12 +2,9 @@ package com.architecturedemo.http;
 
 import android.util.Log;
 
-import com.architecturedemo.CcsApplication;
 import com.architecturedemo.Constant;
 import com.architecturedemo.interceptor.AddCookiesInterceptor;
 import com.architecturedemo.interceptor.ReceivedCookiesInterceptor;
-import com.architecturedemo.ssl.SafeHostnameVerifier;
-import com.architecturedemo.ssl.SafeTrustManager;
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
@@ -50,11 +47,8 @@ public class RequetRetrofit {
                     .readTimeout(Constant.Server.TIME_OUT, TimeUnit.SECONDS)
                     .writeTimeout(Constant.Server.TIME_OUT, TimeUnit.SECONDS)
                     .addNetworkInterceptor(new StethoInterceptor())
-                    .addInterceptor(new AddCookiesInterceptor()) //这部分
-                    .addInterceptor(new ReceivedCookiesInterceptor()) //这部分
-                    .hostnameVerifier(new SafeHostnameVerifier())
-                    .sslSocketFactory(CcsApplication.getSslSocket(),new SafeTrustManager())
-                    //
+                    .addInterceptor(new AddCookiesInterceptor()) //
+                    .addInterceptor(new ReceivedCookiesInterceptor())
                     .build();
         }
 
